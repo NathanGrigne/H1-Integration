@@ -31,7 +31,7 @@ header nav{
     position: absolute;
     left: 45%;
     bottom: 20px;
-    font-size: 2em;
+    font-size: 1.7em;
     text-transform: bold;
 }
 
@@ -138,6 +138,7 @@ main .presentation_homepod_purchase .selection_purchase .choose_color{
     justify-content: center;
     align-items: center;
     margin: 10px;
+    background-color: rgba(255, 255, 255, 0.20);
 }
 
 main .presentation_homepod_purchase .selection_purchase .choose_color img{
@@ -237,7 +238,6 @@ main .presentation_homepod_purchase .selection_purchase .choose_color.isSelect{
 
 .description_homepod h2#technics{
     font-size: 3em;
-    text-decoration: underline;
 }
 
 .technical_aspect{
@@ -299,7 +299,7 @@ main .presentation_homepod_purchase .selection_purchase .choose_color.isSelect{
 
 .slider_homekit{
     position : relative;
-    width: 960px;
+    width: 100vw;
     height: 600px;
     overflow: hidden;
     padding-top: 50px;
@@ -316,11 +316,11 @@ main .presentation_homepod_purchase .selection_purchase .choose_color.isSelect{
     display: flex;
     transition: ease-in 0.5s all;
     will-change: left;
+    width: 100vw;
 }
 
 .sliderContainer_homekit img{
-    height: 400px;
-    width: 330px;
+    height:400px;
 }
 
 .previousHomeKit{

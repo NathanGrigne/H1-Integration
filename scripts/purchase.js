@@ -19,7 +19,7 @@ for (let i=0; i<color.length; i++){
 }
 
 const slider = document.querySelector('.sliderContainer')
-const sliderImages = document.querySelectorAll('.slider img')
+const sliderImages = document.querySelectorAll('.sliderContainer  img')
 const previous = document.querySelector('.previous')
 const next = document.querySelector('.next')
 const sliderContainer = document.querySelector('.contentSlider')
@@ -39,6 +39,7 @@ slider.addEventListener('mouseout', playSlider)
 
 function setPosition(pos) {
     slider.style.left = pos * step + 'px'
+
 }
 
 function stopSlider() {
@@ -70,8 +71,6 @@ next.addEventListener(
     'click',
     function(){
         pos++
-        console.log('dgndghd')
-
         if (pos > sliderImages.length-1){
             pos = 0
         }
@@ -83,14 +82,14 @@ const previousHomeKit = document.querySelector('.previousHomeKit')
 const nextHomeKit = document.querySelector('.nextHomeKit')
 const sliderImagesHomeKit = document.querySelectorAll('.sliderContainer_homekit img')
 const sliderContainerHomeKit = document.querySelector('.sliderContainer_homekit')
-let step2 = -400,
+let step2 = -300,
     time2 = 3000,
     pos2 = 0
 
 let slide2 = setInterval(
     function(){
         pos2 = (pos2+1)%sliderImagesHomeKit.length
-        sliderContainerHomeKit.style.left = pos*step2+'px'
+        sliderContainerHomeKit.style.left = pos2*step2+'px'
     },
     time2
 )
@@ -109,17 +108,17 @@ previousHomeKit.addEventListener(
         if (pos2 < 0){
             pos2 = sliderImagesHomeKit.length-1
         }
-        sliderContainerHomeKit.style.left = pos2*stepZ + 'px'
+        sliderContainerHomeKit.style.left = pos2*step2 + 'px'
     }
 )
 
 nextHomeKit.addEventListener(
     'click',
     function(){
-        pos++
+        pos2++
         if (pos2 > sliderImagesHomeKit.length-1){
             pos2 = 0
         }
-        sliderContainerHomeKit.style.left = pos2*stepZ + 'px'
+        sliderContainerHomeKit.style.left = pos2*step2 + 'px'
     }
 )
